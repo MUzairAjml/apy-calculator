@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
 import './ApyForm.css';
 
 const ApyForm = () => {
@@ -16,7 +16,6 @@ const ApyForm = () => {
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
       };   
-      console.log(apy);
     return (
         <div className="form-div">
               <Form
@@ -68,7 +67,7 @@ const ApyForm = () => {
     </Form>
     <div className="label">
       <h2><b>APY is : </b></h2>
-      <h2 style={{marginLeft:'8px'}}>
+      <h2 style={{marginLeft:'8px',color:'red'}}>
         {apy}
       </h2>
     </div>

@@ -1,6 +1,12 @@
 .site-layout__navbar {
     justify-content: start !important;
 }
+@media screen and (max-width:600px) {
+    .site-layout__navbar{
+        justify-content: center !important;
+    }
+    
+}
 
 
 
@@ -21,6 +27,13 @@
     text-align: center;
     animation: 2s ease 0s normal forwards 1 fadeIn,
       gradientBackground 15s ease infinite ;
+}
+@media screen and (max-width:600px) {
+    .container{
+        margin-left: unset !important;
+        width: unset !important;
+    }
+    
 }
   
   .title {
