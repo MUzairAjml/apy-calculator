@@ -67,8 +67,8 @@ const ApyForm = () => {
      
     </Form>
     <div className="label">
-      <h2><b>APY is :</b></h2>
-      <h2>
+      <h2><b>APY is : </b></h2>
+      <h2 style={{marginLeft:'8px'}}>
         {apy}
       </h2>
     </div>
