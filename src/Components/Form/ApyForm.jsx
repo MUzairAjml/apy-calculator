@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, Card } from 'antd';
 import './ApyForm.css';
 
 const ApyForm = () => {
   const [reward,setReward]=useState();
-  const [fee,setFee]=useState();
+  const [fee,setFee]=useState(0);
   const [tvl,setTvl]=useState();
   const [apy,setApy]=useState();
 
     const onFinish = (values) => {
         const APY=(((((((reward*365+fee*52)/tvl)/365)+1)**365)-1)*100)
-        setApy(APY);
+        setApy(APY.toFixed(2));
+
       };
     
       const onFinishFailed = (errorInfo) => {
@@ -28,7 +29,7 @@ const ApyForm = () => {
       autoComplete="off"
     >
       <Form.Item
-        label="Reward in Value"
+        label="Distributed Reward"
         type="number"
         name="reward"
         rules={[{ required: true, message: 'Please input reward!' }]}
@@ -38,7 +39,7 @@ const ApyForm = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item
+      {/* <Form.Item
         label="7 Days Fee"
         name="fee"
         rules={[{ required: true, message: 'Please input your fee!' }]}
@@ -46,7 +47,7 @@ const ApyForm = () => {
         onChange={(e)=>setFee(e.target.value)}
       >
         <Input />
-      </Form.Item>
+      </Form.Item> */}
 
       <Form.Item
         label="TVL"
@@ -66,24 +67,18 @@ const ApyForm = () => {
       </Form.Item>
      
     </Form>
+
+      {/* APY CAL */}
+
     <div className="label">
-      <h2><b>APY is : </b></h2>
-      <h2 style={{marginLeft:'8px',color:'red'}}>
-        {apy}
-      </h2>
-    </div>
-    <div className="formula-div">
-      <h3><b>Formula Used : </b></h3>
-      <span className="formula">
-      <h4 style={{color:'green'}}>A= reward in dollar</h4>
-      <h4 style={{color:'purple'}}>B = (A x 365) + fees generated</h4>
-      <h4 style={{color:'#F90422'}}>C = B / TVL</h4>
-      <h4 style={{color:'#F94E04'}}>D = C / 364</h4>
-      <h4 style={{color:'#2F2FD3'}}>E= 1 + D</h4>
-      <h4 style={{color:'blue'}}>F = E ^ 365</h4>
-      <h4 style={{color:'red'}}>Final APY = F - 1</h4>
-      </span>
-      </div>
+    <Card style={{ width: 300,height:'62px' }}>
+    <p className='apy'>
+      <h3>APY is : </h3>
+      <h4 style={{color:'red'}}>{apy}</h4>
+    </p>
+  </Card>
+  </div>
+
         </div>
     )
 }

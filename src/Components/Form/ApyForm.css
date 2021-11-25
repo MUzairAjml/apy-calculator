@@ -1,12 +1,20 @@
 .form-div{
-    width:80%;
+    width:45%;
     margin-top: 40px;
+    
+}
+.apy{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
 }
 .label{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-left: 101px;
 }
 .formula-div{
     display: flex;
