@@ -29,6 +29,7 @@ const ApyForm = () => {
     >
       <Form.Item
         label="Reward in Value"
+        type="number"
         name="reward"
         rules={[{ required: true, message: 'Please input reward!' }]}
         value={reward}
@@ -71,6 +72,18 @@ const ApyForm = () => {
         {apy}
       </h2>
     </div>
+    <div className="formula-div">
+      <h3><b>Formula Used : </b></h3>
+      <span className="formula">
+      <h4 style={{color:'green'}}>A= reward in dollar</h4>
+      <h4 style={{color:'purple'}}>B = (A x 365) + fees generated</h4>
+      <h4 style={{color:'#F90422'}}>C = B / TVL</h4>
+      <h4 style={{color:'#F94E04'}}>D = C / 364</h4>
+      <h4 style={{color:'#2F2FD3'}}>E= 1 + D</h4>
+      <h4 style={{color:'blue'}}>F = E ^ 365</h4>
+      <h4 style={{color:'red'}}>Final APY = F - 1</h4>
+      </span>
+      </div>
         </div>
     )
 }
