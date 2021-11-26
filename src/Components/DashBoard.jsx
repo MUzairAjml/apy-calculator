@@ -1,13 +1,18 @@
 import React from 'react'
 import ApyForm from './Form/ApyForm'
 import FormulaCard from './FormulaCard/FormulaCard'
+import './DashBoard.css';
+import AnnouncementCard from './AnnouncementCard/AnnouncementCard';
 
 const DashBoard = () => {
     return (
-        <div style={{display:'flex',justifyContent:'space-evenly'}}>
+        <>
+        <div className="dashboard">
             <ApyForm/>
             <FormulaCard/>
         </div>
+        <AnnouncementCard/>
+        </>
     )
 }
 

@@ -11,10 +11,15 @@
 }
 .label{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-left: 101px;
+}
+@media screen and (max-width:600px) {
+    .label{
+        margin-left: unset !important;
+    }    
 }
 .formula-div{
     display: flex;

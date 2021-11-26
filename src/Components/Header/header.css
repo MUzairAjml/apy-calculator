@@ -17,16 +17,19 @@
       monospace,
       sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 0;
-    margin-left: 8px;
+    /* margin-left: 8px; */
     width: 200px;
     color: #0a0a0a;
     text-align: center;
     animation: 2s ease 0s normal forwards 1 fadeIn,
       gradientBackground 15s ease infinite ;
+}
+.desc{
+    color: tomato;
 }
 @media screen and (max-width:600px) {
     .container{
@@ -58,6 +61,7 @@
     animation: animate 3s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    margin-top: -17px;
   }
   
   @keyframes animate {

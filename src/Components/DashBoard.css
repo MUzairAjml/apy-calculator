@@ -1,0 +1,12 @@
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@media screen and (max-width:600px) {
+    .dashboard{
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    
+}

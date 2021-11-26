@@ -1,0 +1,13 @@
+.ann-card{
+    width: 600;
+    margin-top:-244px;
+    background:transparent;
+    border:none
+}
+@media screen and (max-width:600px) {
+    .ann-card{
+        width: unset !important;
+        margin-top: unset !important;
+    }
+    
+}

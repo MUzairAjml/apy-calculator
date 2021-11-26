@@ -7,7 +7,7 @@ import DashBoard from './Components/DashBoard';
 
 function App() {
   return (
-    <div className='main-content'>
+    <div>
       <ApyHeader/>
       <DashBoard/>
     </div>
