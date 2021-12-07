@@ -9,7 +9,7 @@ const ApyForm = () => {
   const [apy,setApy]=useState();
 
     const onFinish = (values) => {
-        const APY=(((((((reward*365+fee*52)/tvl)/365)+1)**365)-1)*100)
+        const APY=((reward*365+fee)/tvl)*100
         setApy(APY.toFixed(2));
 
       };

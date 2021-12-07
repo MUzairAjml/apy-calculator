@@ -19,13 +19,6 @@ const FormulaCard = () => {
   
   {/* Simplified Formula */}
 
-  <Card
-    title={<h2>Simplified Formula</h2>}
-    hoverable
-    style={{ width: 260,marginTop:'5px' }}
-    cover={<img alt="example" src={SimpleFormula} />}
-  >
-  </Card>
         </div>
     )
 }
