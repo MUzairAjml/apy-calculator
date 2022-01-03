@@ -39,7 +39,7 @@ const ApyForm = () => {
         <Input />
       </Form.Item>
 
-      {/* <Form.Item
+      <Form.Item
         label="7 Days Fee"
         name="fee"
         rules={[{ required: true, message: 'Please input your fee!' }]}
@@ -47,7 +47,7 @@ const ApyForm = () => {
         onChange={(e)=>setFee(e.target.value)}
       >
         <Input />
-      </Form.Item> */}
+      </Form.Item>
 
       <Form.Item
         label="TVL"
